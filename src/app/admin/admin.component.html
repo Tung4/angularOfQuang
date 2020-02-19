@@ -1,0 +1,68 @@
+<div class="main-wrapper ">
+  <section class="page-title bg-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="text-lg text-white mt-2">ADMIN</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- contact form start -->
+  <!-- <form action="">
+        <input type="text" [(ngModel)]="courses.name" name="courses-name">
+        <button (click)="addCourses()">Add name</button>
+    </form>  -->
+  <div class="container">
+    <div class="app-title">
+      <h5>Forms Page</h5>
+      <button class="btn btn-success" routerLink="/admin/add">Add+</button>
+    </div>
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Tên khoá học</th>
+          <th scope="col">Tên Mentor</th>
+          <th scope="col">IMAGE</th>
+          <th scope="col">Chức năng</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tbody *ngFor="let course of manyCourses">
+        <tr>
+          <th scope="row">{{course.id}}</th>
+          <td>{{course.title}}</td>
+          <td>{{course.name}}</td>
+          <td><img src="{{course.img}}" alt="" style="widows: 100px;height: 150px;"></td>
+          <td>
+            <button class="btn btn-info" routerLink="/admin/edit/{{course.id}}">Edit</button>
+            <button class="btn btn-danger" (click)="clickConfirm(course.id,course.name,course.title)">Delete</button>
+            <!-- (click)="deleteCourse(course.id)" -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <!-- <div class="row">
+            <div class="col-12">
+                <form class="form-inline">
+                    <label class="pr-1" for="username">Username</label>
+                    <div class="">
+                        <input class="form-control" type="text" name="username" id="username">
+                    </div>
+                    <label class="px-1" for="password">Password</label>
+                    <div class="">
+                        <input class="" type="text" name="password" id="password">
+                    </div>
+
+                    <button class="mx-1 btn btn-primary">Submit</button>
+
+                </form>
+            </div>
+
+        </div> -->
+
+
+</div>
